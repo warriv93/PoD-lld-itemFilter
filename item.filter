@@ -1,0 +1,1194 @@
+﻿//════════════════LLD30-Addon════════════════
+
+//This is a Lootfilter Addon for everyone interested in Low Level Duels.
+//This is a Addon to your existing Lootfilter.
+//After installing there is no! major change to your existing Lootfilter.
+//There are two! exceptions: 
+//#1 Identified! Charms in the lvl range of 1 - 30 will be tagged as for example: "Frw" or "Max Life" or "LLD".
+//#2 Identified! Corrupted Stone of Jordans will be tagged as for example: "Frw" or "Fcr" or "Pdr".
+//
+//Installation:
+//Download the latest patch of LLD30-Addon.
+//Find your Path of Diablo installation Folder.
+//Open your existing "item".file with either notepad or notepad++.
+//Open the LLD30-Addon.file with either notepad or notepad++.
+//Copy & Paste the text of LLD30-Addon on the top! line of your existing "item".file Lootfilter.
+//Save "item".file.
+//
+//Item Level Req Code does not work, few "LLD" tagged Items appear even tho above Level 30. This wont! hurt your existing Lootfilter.
+//
+//Patch: Beta 2.0b
+//Beta 2.0b Inlcudes:
+//LLD30 Charms
+//LLD30 Uniques 
+//LLD30 Sets
+//LLD30 Bases 
+//LLD30 Magic Jewels 
+//LLD30 Amus !
+//LLD30 Staffmods
+//LLD30 magics 
+//LLD30 shopables 
+//LLD30 rares test ashwood !
+//LLD30 misc added
+// no fix for block yet due to lost code
+// no fix for level req yet due to lost code
+//
+//Colours & Values:
+//Items: "YELLOW LLD" General Item Used in LLD30 good base or possibility of good mods, "RED MOD" Best Corruption on LLD30 Item, "RED" also shows viable staffmods.
+//charms & Jewels: "YELLOW LLD" Usable Mod, "RED*" One Perfect Mod, "RED**" Two Mods, "RED***" Two Perfect Mods
+
+//created by bro_hoe
+//ENJOY!
+
+///////////////small charms
+
+//scs frw
+ItemDisplay[ID MAG cm1 ITEMSTAT96=3 ITEMSTAT39=9]:%YELLOW%Frw Fres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 ITEMSTAT96=3 ITEMSTAT41=9]:%YELLOW%Frw Lres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 ITEMSTAT96=3 ITEMSTAT43=9]:%YELLOW%Frw Cres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 ITEMSTAT96=3 ITEMSTAT45=9]:%YELLOW%Frw Pres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 ITEMSTAT96=3 (ITEMSTAT39>5 AND ITEMSTAT39<10)]:%YELLOW%Frw Fres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 ITEMSTAT96=3 (ITEMSTAT41>5 AND ITEMSTAT41<10)]:%YELLOW%Frw Lres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 ITEMSTAT96=3 (ITEMSTAT43>5 AND ITEMSTAT43<10)]:%YELLOW%Frw Cres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 ITEMSTAT96=3 (ITEMSTAT45>5 AND ITEMSTAT45<10)]:%YELLOW%Frw Pres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 ITEMSTAT96=3 MANA=12]:%YELLOW%Frw Mana LLD%RED%***
+ItemDisplay[ID MAG cm1 ITEMSTAT96=3 (MANA>0 AND MANA<13)]:%YELLOW%Frw Mana LLD%RED%**
+ItemDisplay[ID MAG cm1 ITEMSTAT96=3 ITEMSTAT22=3]:%YELLOW%Frw Max Ar Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 ITEMSTAT96=3 (ITEMSTAT22>0 AND ITEMSTAT22<3)]:%YELLOW%Frw Max Ar Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 ITEMSTAT96=3 RES=5]:%YELLOW%Frw Ares LLD%RED%***
+ItemDisplay[ID MAG cm1 ITEMSTAT96=3 (RES=>0 AND RES<6)]:%YELLOW%Frw Ares LLD%RED%**
+
+//scs str
+ItemDisplay[ID MAG cm1 ITEMSTAT0=2 RES=5]:%YELLOW%Str Ares Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 (ITEMSTAT0>0 AND ITEMSTAT0<3 RES>0 AND RES<6)]:%YELLOW%Str Ares Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 ITEMSTAT0=2 ITEMSTAT39=9]:%YELLOW%Str Fres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 ITEMSTAT0=2 ITEMSTAT41=9]:%YELLOW%Str Lres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 ITEMSTAT0=2 ITEMSTAT43=9]:%YELLOW%Str Cres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 ITEMSTAT0=2 ITEMSTAT45=9]:%YELLOW%Str Pres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 (ITEMSTAT0>0 AND ITEMSTAT0<3 ITEMSTAT39>5 AND ITEMSTAT39<10)]:%YELLOW%Str Fres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 (ITEMSTAT0>0 AND ITEMSTAT0<3 ITEMSTAT41>5 AND ITEMSTAT41<10)]:%YELLOW%Str Lres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 (ITEMSTAT0>0 AND ITEMSTAT0<3 ITEMSTAT43>5 AND ITEMSTAT43<10)]:%YELLOW%Str Cres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 (ITEMSTAT0>0 AND ITEMSTAT0<3 ITEMSTAT45>5 AND ITEMSTAT45<10)]:%YELLOW%Str Pres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 ITEMSTAT0=2 MANA=12]:%YELLOW%Str Mana Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 (ITEMSTAT0>0 AND ITEMSTAT0<3 MANA>7 AND MANA<13)]:%YELLOW%Str Mana Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 ITEMSTAT0=2 ITEMSTAT22=3]:%YELLOW%Str Max Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 (ITEMSTAT0>0 AND ITEMSTAT0<3 ITEMSTAT22>0 AND ITEMSTAT22<4)]:%YELLOW%Str Max Sc LLD%RED%**
+
+//scs dex
+ItemDisplay[ID MAG cm1 ITEMSTAT2=2 RES=5]:%YELLOW%Dex Ares Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 (ITEMSTAT2>0 AND ITEMSTAT2<3 RES>0 AND RES<6)]:%YELLOW%Dex Ares Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 ITEMSTAT2=2 ITEMSTAT39=9]:%YELLOW%Dex Fres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 ITEMSTAT2=2 ITEMSTAT41=9]:%YELLOW%Dex Lres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 ITEMSTAT2=2 ITEMSTAT43=9]:%YELLOW%Dex Cres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 ITEMSTAT2=2 ITEMSTAT45=9]:%YELLOW%Dex Pres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 (ITEMSTAT2>0 AND ITEMSTAT2<3 ITEMSTAT39>5 AND ITEMSTAT39<10)]:%YELLOW%Dex Fres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 (ITEMSTAT2>0 AND ITEMSTAT2<3 ITEMSTAT41>5 AND ITEMSTAT41<10)]:%YELLOW%Dex Lres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 (ITEMSTAT2>0 AND ITEMSTAT2<3 ITEMSTAT43>5 AND ITEMSTAT43<10)]:%YELLOW%Dex Cres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 (ITEMSTAT2>0 AND ITEMSTAT2<3 ITEMSTAT45>5 AND ITEMSTAT45<10)]:%YELLOW%Dex Pres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 ITEMSTAT2=2 MANA=12]:%YELLOW%Dex Mana Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 (ITEMSTAT2>0 AND ITEMSTAT2<3 MANA>7 AND MANA<13)]:%YELLOW%Dex Mana Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 ITEMSTAT2=2 ITEMSTAT22=3]:%YELLOW%Dex Max Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 (ITEMSTAT2>0 AND ITEMSTAT2<3 ITEMSTAT22>0 AND ITEMSTAT22<4)]:%YELLOW%Dex Max Sc LLD%RED%**
+
+//scs fhr
+ItemDisplay[ID MAG cm1 FHR=5 MANA=12]: %YELLOW%Fhr Mana LLD%RED%***
+ItemDisplay[ID MAG cm1 FHR=5 (MANA>0 AND MANA<13)]: %YELLOW%Fhr Mana LLD%RED%**
+ItemDisplay[ID MAG cm1 FHR=5 RES=5]:%YELLOW%Fhr Ares Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 FHR=5 (RES>0 AND RES<6)]:%YELLOW%Fhr Ares Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 FHR=5 ITEMSTAT39=9]:%YELLOW%Fhr Fres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 FHR=5 ITEMSTAT41=9]:%YELLOW%Fhr Lres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 FHR=5 ITEMSTAT43=9)]:%YELLOW%Fhr Cres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 FHR=5 ITEMSTAT45=9]:%YELLOW%Fhr Pres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 FHR=5 (ITEMSTAT39>5 AND ITEMSTAT39<10)]:%YELLOW%Fhr Fres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 FHR=5 (ITEMSTAT41>5 AND ITEMSTAT41<10)]:%YELLOW%Fhr Lres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 FHR=5 (ITEMSTAT43>5 AND ITEMSTAT43<10)]:%YELLOW%Fhr Cres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 FHR=5 (ITEMSTAT45>5 AND ITEMSTAT45<10)]:%YELLOW%Fhr Pres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 FHR=5 ITEMSTAT22=3]:%YELLOW%Fhr Max Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 FHR=5 (ITEMSTAT22>0 AND ITEMSTAT22<4)]:%YELLOW%Fhr Max Sc LLD%RED%**
+
+//scs res
+ItemDisplay[ID MAG cm1 RES=5]:%YELLOW%Ares Sc LLD%RED%*
+ItemDisplay[ID MAG cm1 (RES>0 AND RES<6)]:%YELLOW%Ares Sc LLD
+ItemDisplay[ID MAG cm1 ITEMSTAT39=9]:%YELLOW%Fres Sc LLD%RED%*
+ItemDisplay[ID MAG cm1 ITEMSTAT41=9]:%YELLOW%Lres Sc LLD%RED%*
+ItemDisplay[ID MAG cm1 ITEMSTAT43=9]:%YELLOW%Cres Sc LLD%RED%*
+ItemDisplay[ID MAG cm1 ITEMSTAT45=9]:%YELLOW%Pres Sc LLD%RED%*
+ItemDisplay[ID MAG cm1 (ITEMSTAT39>5 AND ITEMSTAT39<10)]:%YELLOW%Fres Sc LLD
+ItemDisplay[ID MAG cm1 (ITEMSTAT41>5 AND ITEMSTAT41<10)]:%YELLOW%Lres Sc LLD
+ItemDisplay[ID MAG cm1 (ITEMSTAT43>5 AND ITEMSTAT43<10)]:%YELLOW%Cres Sc LLD
+ItemDisplay[ID MAG cm1 (ITEMSTAT45>5 AND ITEMSTAT45<10)]:%YELLOW%Pres Sc LLD
+
+//scs mana
+ItemDisplay[ID MAG cm1 !ITEMSTAT80>0 !LIFE>0 MANA=12]:%YELLOW%Mana Sc LLD%RED%*
+ItemDisplay[ID MAG cm1 !ITEMSTAT80>0 !LIFE>0 (MANA>7 AND MANA<13)]:%YELLOW%Mana Sc LLD
+
+//scs life
+ItemDisplay[ID MAG cm1 LIFE=15 AND ITEMSTAT39=9]:%YELLOW%Life Fres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 LIFE=15 AND ITEMSTAT41=9]:%YELLOW%Life Lres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 LIFE=15 AND ITEMSTAT43=9]:%YELLOW%Life Cres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 LIFE=15 AND ITEMSTAT45=9]:%YELLOW%Life Pres Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 (LIFE>0 AND LIFE<16 ITEMSTAT39>0 AND ITEMSTAT39<10)]:%YELLOW%Life Fres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 (LIFE>0 AND LIFE<16 ITEMSTAT41>0 AND ITEMSTAT41<10)]:%YELLOW%Life Lres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 (LIFE>0 AND LIFE<16 ITEMSTAT43>0 AND ITEMSTAT43<10)]:%YELLOW%Life Cres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 (LIFE>0 AND LIFE<16 ITEMSTAT45>0 AND ITEMSTAT45<10)]:%YELLOW%Life Pres Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 LIFE=15 AND RES=5]:%YELLOW%Life Ares Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 (LIFE>9 AND LIFE<16 RES>0 AND RES<6)]:%YELLOW%Life Ares Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 LIFE=15 AND ITEMSTAT22=3]:%YELLOW%Max Life Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 (LIFE>0 AND LIFE<16) (ITEMSTAT22>0 AND ITEMSTAT22<4)]:%YELLOW%Max Life Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 LIFE=15 MANA=12]:%YELLOW%Life Mana Sc LLD%RED%***
+ItemDisplay[ID MAG cm1 (LIFE>0 AND LIFE<16 MANA>0 AND MANA<13)]:%YELLOW%Life Mana Sc LLD%RED%**
+ItemDisplay[ID MAG cm1 LIFE=15]:%YELLOW%Life Sc LLD%RED%*
+ItemDisplay[ID MAG cm1 (LIFE>9 AND LIFE<16) !ITEMSTAT39>0 !ITEMSTAT41>0 !ITEMSTAT43>0 !ITEMSTAT45>0 ]:%YELLOW%Life Sc LLD
+
+//scs max ar
+ItemDisplay[ID MAG cm1 ITEMSTAT22=3 !LIFE>0]:%YELLOW%Max Sc LLD%RED%* //test
+ItemDisplay[ID MAG cm1 ITEMSTAT22>0 !LIFE>0]:%YELLOW%Max Sc LLD //test
+
+////large charms
+
+//large charms frw
+ItemDisplay[ID MAG cm2 ITEMSTAT96=5 ITEMSTAT22=6 ITEMSTAT68=48]:%YELLOW%Frw Max Lc LLD%RED%***
+ItemDisplay[ID MAG cm2 ITEMSTAT96=5 ITEMSTAT22>4]:%YELLOW%Frw Max Lc LLD%RED%**
+ItemDisplay[ID MAG cm2 ITEMSTAT96=5 ITEMSTAT22>0]:%YELLOW%Frw Max Lc LLD%RED%*
+ItemDisplay[ID MAG cm2 ITEMSTAT96=5 RES=8]:%YELLOW%Frw Ares Lc LLD%RED%*
+ItemDisplay[ID MAG cm2 ITEMSTAT96=5 RES>0]:%YELLOW%Frw Ares Gc LLD
+
+//Lc fhr
+ItemDisplay[ID MAG cm2 FHR=8 ITEMSTAT22=6 ITEMSTAT68=48]:%YELLOW%Fhr Max Lc LLD%RED%***
+ItemDisplay[ID MAG cm2 FHR=8 ITEMSTAT22=6]:%YELLOW%Fhr Max Lc LLD%RED%**
+ItemDisplay[ID MAG cm2 FHR=8 ITEMSTAT22>0]:%YELLOW%Fhr Max Lc LLD
+
+//Lc str
+ItemDisplay[ID MAG cm2 ITEMSTAT0=5 ITEMSTAT22=6 ITEMSTAT68=76]:%YELLOW%Str Max Lc LLD%RED%***
+ItemDisplay[ID MAG cm2 ITEMSTAT0>0 ITEMSTAT22=6]:%YELLOW%Str Max Lc LLD%RED%**
+ItemDisplay[ID MAG cm2 ITEMSTAT0>0 ITEMSTAT22>0]:%YELLOW%Str Max Lc LLD%RED%*
+ItemDisplay[ID MAG cm2 ITEMSTAT0=5 RES=8]:%YELLOW%Str Ares Lc LLD%RED%**
+ItemDisplay[ID MAG cm2 ITEMSTAT0>0 RES>0]:%YELLOW%Str Ares Lc LLD
+
+//Lc Dex
+ItemDisplay[ID MAG cm2 ITEMSTAT2=5 ITEMSTAT22=6 ITEMSTAT68=76]:%YELLOW%Dex Max Lc LLD%RED%***
+ItemDisplay[ID MAG cm2 ITEMSTAT2>0 ITEMSTAT22=6]:%YELLOW%Dex Max Lc LLD%RED%**
+ItemDisplay[ID MAG cm2 ITEMSTAT2>0 ITEMSTAT22>0]:%YELLOW%Dex Max Lc LLD%RED%*
+ItemDisplay[ID MAG cm2 ITEMSTAT2=5 RES=8]:%YELLOW%Dex Ares Lc LLD%RED%**
+ItemDisplay[ID MAG cm2 ITEMSTAT2>0 RES>0]:%YELLOW%Dex Ares Lc LLD
+
+//Lc Mana 
+ItemDisplay[ID MAG cm2 MANA=18]:%YELLOW%Mana Lc LLD%RED%*
+ItemDisplay[ID MAG cm2 MANA>12]:%YELLOW%Mana Lc LLD
+
+//Lc max Life
+ItemDisplay[ID MAG cm2 LIFE=20 ITEMSTAT22=6 ITEMSTAT68=48]:%YELLOW%Life Max Lc LLD%RED%***
+ItemDisplay[ID MAG cm2 (LIFE>15 AND LIFE<21) ITEMSTAT22>4]:%YELLOW%Life Max Lc LLD%RED%**
+ItemDisplay[ID MAG cm2 (LIFE>0 AND LIFE<21) ITEMSTAT22>0]:%YELLOW%Life Max Lc LLD
+
+////////grand charms
+
+//Gc frw
+ItemDisplay[ID MAG cm3 ITEMSTAT96=7 ITEMSTAT22=10 ITEMSTAT68=76]:%YELLOW%Frw Max Gc LLD%RED%***
+ItemDisplay[ID MAG cm3 ITEMSTAT96=7 ITEMSTAT22>6]:%YELLOW%Frw Max Gc LLD%RED%**
+ItemDisplay[ID MAG cm3 ITEMSTAT96=7 ITEMSTAT22>0]:%YELLOW%Frw Max Gc LLD%RED%*
+ItemDisplay[ID MAG cm3 ITEMSTAT96=7 RES=15]:%YELLOW%Frw Ares Gc LLD%RED%*
+ItemDisplay[ID MAG cm3 ITEMSTAT96=7 RES>9]:%YELLOW%Frw Ares Gc LLD
+
+//Gc fhr
+ItemDisplay[ID MAG cm3 FHR=12 ITEMSTAT22=10 ITEMSTAT68=76]:%YELLOW%Fhr Max Gc LLD%RED%***
+ItemDisplay[ID MAG cm3 FHR=12 ITEMSTAT22=10]:%YELLOW%Fhr Max Gc LLD%RED%**
+ItemDisplay[ID MAG cm3 FHR=12 ITEMSTAT22>5]:%YELLOW%Fhr Max Gc LLD
+
+//Gc str
+ItemDisplay[ID MAG cm3 ITEMSTAT0=6 ITEMSTAT22=10 ITEMSTAT68=76]:%YELLOW%Str Max Ar Gc LLD%RED%***
+ItemDisplay[ID MAG cm3 ITEMSTAT0>0 ITEMSTAT22>6]:%YELLOW%Str Max Ar Gc LLD%RED%**
+ItemDisplay[ID MAG cm3 ITEMSTAT0>0 ITEMSTAT22>0]:%YELLOW%Str Max Ar Gc LLD%RED%*
+ItemDisplay[ID MAG cm3 ITEMSTAT0=6 RES=15]:%YELLOW%Str Ares Gc LLD%RED%**
+ItemDisplay[ID MAG cm3 ITEMSTAT0>0 RES>9]:%YELLOW%Str Ares Gc LLD
+
+//Gc dex
+ItemDisplay[ID MAG cm3 ITEMSTAT2=6 ITEMSTAT22=10 ITEMSTAT68=76]:%YELLOW%Dex Max Ar Gc LLD%RED%***
+ItemDisplay[ID MAG cm3 ITEMSTAT2>0 ITEMSTAT22>6]:%YELLOW%Dex Max Ar Gc LLD%RED%**
+ItemDisplay[ID MAG cm3 ITEMSTAT2>0 ITEMSTAT22>0]:%YELLOW%Dex Max Ar Gc LLD%RED%*
+ItemDisplay[ID MAG cm3 ITEMSTAT2=6 RES=15]:%YELLOW%Dex Ares Gc LLD%RED%**
+ItemDisplay[ID MAG cm3 ITEMSTAT2>0 RES>9]:%YELLOW%Dex Ares Gc LLD
+
+//Gc Mana 
+ItemDisplay[ID MAG cm3 MANA=46 !LIFE]:%YELLOW%Mana Gc LLD%RED%*
+ItemDisplay[ID MAG cm3 MANA>33 !LIFE]:%YELLOW%Mana Gc LLD
+
+//Gc max Life
+ItemDisplay[ID MAG cm3 LIFE=25 ITEMSTAT22=10 ITEMSTAT68=76]:%YELLOW%Life Max Gc LLD%RED%***
+ItemDisplay[ID MAG cm3 (LIFE>19 AND LIFE<26) ITEMSTAT22>6]:%YELLOW%Life Max Gc LLD%RED%**
+ItemDisplay[ID MAG cm3 (LIFE>0 AND LIFE<26) ITEMSTAT22>0]:%YELLOW%Life Max Gc LLD
+ItemDisplay[ID MAG cm3 ITEMSTAT22>7 !LIFE>0]:%YELLOW%Max Gc LLD
+
+//Gc res
+ItemDisplay[ID MAG cm3 RES=15]:%YELLOW%Ares Gc LLD%RED%*
+ItemDisplay[ID MAG cm3 RES>9]:%YELLOW%Ares Gc LLD
+
+///////////////uniques / sets
+
+//unique armors
+ItemDisplay[UNI !ETH xea (SOCK=2)]: %GOLD%Skin of the Vipermagi %RED%%SOCKETS%Os*
+ItemDisplay[UNI !ETH xea FCR=40]: %GOLD%Skin of the Vipermagi %RED%FCR*
+ItemDisplay[UNI !ETH xea]: %GOLD%Skin of the Vipermagi %YELLOW%LLD
+ItemDisplay[UNI !ETH stu IAS=30]: %GOLD%Twitchthroe %RED%IAS*
+ItemDisplay[UNI !ETH stu (SOCK>1 AND SOCK<3)]: %GOLD%Twitchthroe %RED%%SOCKETS%Os*
+ItemDisplay[UNI !ETH stu]: %GOLD%Twitchthroe %YELLOW%LLD
+ItemDisplay[UNI !ETH gth (SOCK=4)]: %GOLD%Rattlecage %RED%%SOCKETS%Os*
+ItemDisplay[UNI !ETH gth]: %GOLD%Rattlecage %YELLOW%LLD
+ItemDisplay[UNI !ETH xui (SOCK=2)]: %GOLD%%NAME% %RED%%SOCKETS%Os* // spirit shroud
+ItemDisplay[UNI !ETH xui]: %GOLD%%NAME% %YELLOW%LLD // spirit shroud
+ItemDisplay[UNI !ETH aar SOCK=4]: %GOLD%%NAME% %RED%%SOCKETS%Os* // silks of the victor
+ItemDisplay[UNI !ETH aar]: %GOLD%%NAME% %YELLOW%LLD // silks of the victor
+
+//set armors
+ItemDisplay[SET !ETH gth (SOCKET=4)]: %GREEN%%NAME% %RED%%SOCKETS%Os* //Sigon's Shelter
+ItemDisplay[SET !ETH gth]: %GREEN%%NAME% %YELLOW%LLD //Sigon's Shelter
+ItemDisplay[SET !ETH xcl SOCKET=3]: %GREEN%%NAME% %RED%%SOCKETS%Os* //Hwani's
+ItemDisplay[SET !ETH xcl]: %GREEN%%NAME% %YELLOW%LLD //Hwani's
+
+
+//unique helms
+ItemDisplay[UNI !ETH xap SOCK=2]: %GOLD%Peasant Crown %RED%%SOCKETS%Os*
+ItemDisplay[UNI !ETH xap ITEMSTAT0>4]: %GOLD%Peasant Crown %RED%Str*
+ItemDisplay[UNI !ETH xap]: %GOLD%Peasant Crown %YELLOW%LLD
+
+//set helms
+ItemDisplay[SET !ETH ghm (SOCKET=3)]: %GREEN%%NAME% %RED%%SOCKETS%Os* //Sigon's Shelter
+ItemDisplay[SET !ETH ghm]: %GREEN%%NAME% %YELLOW%LLD //Sigon's Shelter
+
+//unique shields
+ItemDisplay[UNI !ETH bsh SOCK=2]: %GOLD%%NAME% %RED%%SOCKETS%Os* //Wall of the Eyeless
+ItemDisplay[UNI !ETH bsh]: %GOLD%%NAME% %YELLOW%LLD //Wall of the Eyeless
+ItemDisplay[UNI !ETH xuc SOCK=2]: %GOLD%%NAME% %RED%%SOCKETS%Os* // visceratuant
+ItemDisplay[UNI !ETH xuc]: %GOLD%%NAME% %YELLOW%LLD //visceratuant
+ItemDisplay[UNI !ETH xpk SOCK=2]: %GOLD%%NAME% %RED%%SOCKETS%Os* // swordback
+ItemDisplay[UNI !ETH xpk]: %GOLD%%NAME% %YELLOW%LLD //swordback 
+
+
+//set shields
+// block right?
+ItemDisplay[SET !ETH xml ITEMSTAT20=63]: %GREEN%Whitstan's Guard %RED%Block*
+ItemDisplay[SET !ETH xml (SOCK=2)]: %GREEN%Whitstan's Guard %RED%%SOCKETS%Os*
+ItemDisplay[SET !ETH xml]: %GREEN%Whitstan's Guard %YELLOW%LLD
+ItemDisplay[SET !ETH xow (SOCKET=4)]: %GREEN%%NAME% %RED%Up%SOCKETS%Os* //Sigon's Guard
+ItemDisplay[SET !ETH tow (SOCKET=3)]: %GREEN%%NAME% %RED%%SOCKETS%Os* //Sigon's Guard
+ItemDisplay[SET !ETH tow]: %GREEN%%NAME% %YELLOW%LLD //Sigon's Guard
+
+//unique belts
+ItemDisplay[UNI !ETH zlb]: %GOLD%%NAME% %YELLOW%LLD //string of ears - uppd lenymo
+ItemDisplay[UNI !ETH lbl]: %GOLD%Lenymo %YELLOW%LLD
+ItemDisplay[UNI !ETH mbl]: %GOLD%%NAME% %YELLOW%LLD //nightsmoke
+ItemDisplay[UNI !ETH hbl]: %GOLD%%NAME% %YELLOW%LLD //bladebuckle 
+ItemDisplay[SET !ETH hbl]: %GREEN%%NAME% %YELLOW%LLD //Sigons 
+
+//set belts
+ItemDisplay[SET !ETH lbl]: %GREEN%Death's Guard %YELLOW%LLD
+ItemDisplay[SET !ETH zhb]: %GREEN%Immortal King's Detail %YELLOW%LLD
+ItemDisplay[SET !ETH LIFE=20 AND ITEMSTAT39=20]: %GREEN%%NAME% %YELLOW%LLD //Sigon's Wrap
+
+//unique gloves
+ItemDisplay[UNI !ETH vgl IAS=20]: %GOLD%Bloodfist %RED%Ias*
+ItemDisplay[UNI !ETH vgl]: %GOLD%Bloodfist %YELLOW%LLD
+ItemDisplay[UNI !ETH tgl RES>4<11]: %GOLD%Magefist %RED%Res*
+ItemDisplay[UNI !ETH tgl IAS=10]: %GOLD%Magefist %RED%Ias*
+ItemDisplay[UNI !ETH tgl]: %GOLD%Magefist %YELLOW%LLD
+ItemDisplay[UNI !ETH hgl RES>4<11]: %GOLD%Frostburn %RED%Res*
+ItemDisplay[UNI !ETH hgl]: %GOLD%Frostburn %YELLOW%LLD
+ItemDisplay[UNI !ETH vgl IAS=10]: %GOLD%%NAME% %RED%Ias* //Sanders
+ItemDisplay[UNI !ETH vgl]: %GOLD%%NAME% %YELLOW%LLD //Sanders
+
+//set gloves
+ItemDisplay[SET !ETH lgl IAS=40]: %GREEN%Death's Hand %RED%Ias*
+ItemDisplay[SET !ETH lgl IAS=10]: %GREEN%Death's Hand %RED%Ias*
+ItemDisplay[SET !ETH lgl]: %GREEN%Death's Hand %YELLOW%LLD
+ItemDisplay[SET !ETH xhg AND RES=10]: %GREEN%Immortal King's Forge %RED%Ares*
+ItemDisplay[SET !ETH xhg AND IAS=10]: %GREEN%Immortal King's Forge %RED%Ias*
+ItemDisplay[SET !ETH xhg]: %GREEN%Immortal King's Forge %YELLOW%LLD
+ItemDisplay[SET !ETH hgl AND RES=>4<11]: %GREEN%%NAME% %RED%Ares* //Sigon's Gage
+ItemDisplay[SET !ETH hgl AND IAS=10]: %GREEN%%NAME% %RED%Ias* //Sigon's Gage
+ItemDisplay[SET !ETH hgl]: %GREEN%%NAME% %YELLOW%LLD //Sigon's Gage
+
+//unique boots
+ItemDisplay[UNI tbt ITEMSTAT2>4<11]: %GOLD%%NAME% %RED%Dex*  //goblin toe
+ItemDisplay[UNI tbt AND RES=10]: %GOLD%%NAME% %RED%Ares* //goblin toe
+ItemDisplay[UNI tbt ITEMSTAT380=10]: %GOLD%%NAME% %RED%Cdr* //goblin toe
+ItemDisplay[UNI	tbt]: %GOLD%%NAME% %YELLOW%LLD //goblin toe
+ItemDisplay[UNI hbt ITEMSTAT2>5<16]: %GOLD%%NAME% Forge %RED%Dex* //tearhaunch
+ItemDisplay[UNI hbt AND RES>10<21]: %GOLD%%NAME% Forge %RED%Ares* //tearhaunch
+ItemDisplay[UNI hbt ITEMSTAT380=10]: %GOLD%%NAME% %RED%Cdr* //tearhaunch
+ItemDisplay[UNI	hbt]: %GOLD%%NAME% %YELLOW%LLD //tearhaunch
+ItemDisplay[UNI	lbt AND RES=10]: %GOLD%%NAME% Forge %RED%Ares* //hotspur
+ItemDisplay[UNI	lbt ITEMSTAT380=10]: %GOLD%%NAME% %RED%Cdr* // hotspur
+ItemDisplay[UNI	lbt]: %GOLD%%NAME% %YELLOW%LLD // Hotspur
+
+//set boots
+ItemDisplay[SET !ETH vbt ITEMSTAT2>20<31]: %GREEN%%NAME% %RED%Dex* //cow king
+ItemDisplay[SET !ETH vbt ITEMSTAT2=20 AND ITEMSTAT380=10]: %GREEN%%NAME% %RED%Cdr* //cow king
+ItemDisplay[SET !ETH vbt ITEMSTAT2=20 AND RES>4<11]: %GREEN%%NAME% %RED%Res* //cow king
+ItemDisplay[SET !ETH vbt ITEMSTAT2=20]: %GREEN%%NAME% %YELLOW%LLD //cow king
+ItemDisplay[SET !ETH vbt ITEMSTAT2>10<21]: %GREEN%%NAME% %RED%Dex* //Sanders
+ItemDisplay[SET !ETH vbt ITEMSTAT380=10]: %GREEN%%NAME% %RED%Cdr* //Sanders
+ItemDisplay[SET !ETH vbt RES>4<11]: %GREEN%%NAME% %RED%Res* //Sanders
+ItemDisplay[SET !ETH vbt]: %GREEN%%NAME% %YELLOW%LLD //Sanders
+
+ItemDisplay[SET !ETH xmb AND ITEMSTAT380=10]: %GREEN%Natalya's Soul %RED%Cdr*
+ItemDisplay[SET !ETH xmb AND ITEMSTAT39=>9<21]: %GREEN%Natalya's Soul %RED%Fres*
+ItemDisplay[SET !ETH xmb AND ITEMSTAT41=>9<21]: %GREEN%Natalya's Soul %RED%Lres*
+ItemDisplay[SET !ETH xmb AND RES>4<11]: %GREEN%Natalya's Soul %RED%Ares*
+ItemDisplay[SET !ETH xmb]: %GREEN%Natalya's Soul %YELLOW%LLD
+
+ItemDisplay[SET !ETH tbt ITEMSTAT380=10]: %GREEN%%NAME% %RED%Cdr* // vidalas 
+ItemDisplay[SET !ETH tbt AND RES=>4<11]: %GREEN%%NAME% %RED%Ares* // vidalas
+ItemDisplay[SET !ETH tbt]: %GREEN%%NAME% %YELLOW%LLD // vidalas
+ItemDisplay[SET !ETH  ITEMSTAT96=20 AND ITEMSTAT43=40 AND ITEMSTAT380=10]: %GREEN%%NAME% %RED%Cdr* //Sigon's Sabot
+ItemDisplay[SET !ETH  ITEMSTAT96=20 AND ITEMSTAT43=40 AND RES=>4<11]: %GREEN%%NAME% %RED%Ares* //Sigon's Sabot
+ItemDisplay[SET !ETH  hbt]: %GREEN%%NAME% %YELLOW%LLD //Sigon's Sabot
+
+//unique weapons
+ItemDisplay[UNI 8cb SOCK=4]: %GOLD%%NAME% %RED%%SOCKETS%Os* //rogues
+ItemDisplay[UNI 8cb SOCK>0]: %GOLD%%NAME% %YELLOW%LLD //rogues
+ItemDisplay[UNI !ETH 9ss (SOCK=2)]: %GOLD%Bloodletter %RED%%SOCKETS%Os*
+ItemDisplay[UNI !ETH 9ss ITEMSTAT218=33]: %GOLD%Bloodletter %RED%Dmg*
+ItemDisplay[UNI !ETH 9ss ITEMSTAT141=10]: %GOLD%Bloodletter %RED%Ds*
+ItemDisplay[UNI !ETH 9ss]: %GOLD%Bloodletter %YELLOW%LLD
+ItemDisplay[UNI bld SOCK=2]: %GOLD%%NAME% %RED%%SOCKETS%Os* //Spectral Shard
+ItemDisplay[UNI bld]: %GOLD%%NAME% %YELLOW%LLD //Spectral Shard
+ItemDisplay[UNI hbw (SOCK=4)]: %GOLD%%NAME% %RED%%SOCKETS%Os* //Witherstring
+ItemDisplay[UNI hbw]: %GOLD%%NAME% %YELLOW%LLD //Witherstring
+ItemDisplay[UNI wsp AND SOCKET=5]: %GOLD%%NAME% %RED%%SOCKETS%Os* //stormeye
+ItemDisplay[UNI wsp]: %GOLD%%NAME% %YELLOW%LLD //stormeye
+ItemDisplay[UNI wax SOCK=6]: %GOLD%%NAME% %RED%%SOCKETS%Os* //rakescar
+ItemDisplay[UNI wax]: %GOLD%%NAME% %YELLOW%LLD //rakescar
+ItemDisplay[UNI fla SOCK=5]: %GOLD%%NAME% %RED%%SOCKETS%Os* //tan do li ga
+ItemDisplay[UNI fla]: %GOLD%%NAME% %YELLOW%LLD //tan do li ga
+ItemDisplay[UNI mpi SOCK=6]: %GOLD%%NAME% %RED%%SOCKETS%Os* //skull splitter
+ItemDisplay[UNI mpi]: %GOLD%%NAME% %YELLOW%LLD //skull splitter
+ItemDisplay[UNI wsc SOCK=6]: %GOLD%%NAME% %RED%%SOCKETS%Os* //Grim reaper
+ItemDisplay[UNI wsc]: %GOLD%%NAME% %YELLOW%LLD //Grim reaper
+ItemDisplay[UNI mau SOCK=6]: %GOLD%%NAME% %RED%%SOCKETS%Os* //bonesnap
+ItemDisplay[UNI mau]: %GOLD%%NAME% %YELLOW%LLD //bonesnap
+ItemDisplay[UNI gma SOCK=6]: %GOLD%%NAME% %RED%%SOCKETS%Os* // steeldriver
+ItemDisplay[UNI gma]: %GOLD%%NAME% %YELLOW%LLD // steeldriver
+ItemDisplay[UNI 8sb SOCK=3]: %GOLD%%NAME% %RED%%SOCKETS%Os* // skystrike
+ItemDisplay[UNI 8sb]: %GOLD%%NAME% %YELLOW%LLD // skystrike
+
+//set weapons
+ItemDisplay[SET !ETH swb (SOCK=4)]: %GREEN%%NAME% %RED%%SOCKETS%Os* //Arctic Horn
+ItemDisplay[SET !ETH swb]: %GREEN%%NAME% %YELLOW%LLD //Arctic Horn
+
+//unique arrows
+ItemDisplay[UNI aq2 ITEMSTAT43>9<16]: %GOLD%%NAME% %YELLOW%LLD //Spectral Shard
+ItemDisplay[UNI aq2 ITEMSTAT37=>0<6]: %GOLD%%NAME% %YELLOW%LLD //Moonfire
+
+//unique amulets
+ItemDisplay[UNI amu ALLSK=2 AND ITEMSTAT60>2]: %GOLD%%NAME% %RED%+Skill* //Eye of Etlich
+ItemDisplay[UNI amu ALLSK=1 AND ITEMSTAT60>2]: %GOLD%%NAME% %YELLOW%LLD //Eye of Etlich
+ItemDisplay[UNI amu RES=10 AND ED=10 AND ALLSK=1]: %GOLD%%NAME% %RED%+Skill* //The Mahim-Oak Curio
+ItemDisplay[UNI amu RES=10 AND ED=10]: %GOLD%%NAME% %YELLOW%LLD //The Mahim-Oak Curio
+
+//set amulets
+ItemDisplay[SET amu ALLSK=2 amu AND ITEMSTAT43=18]: %GREEN%%NAME% %RED%+Skill* //Telling of Beads
+ItemDisplay[SET amu ITEMSTAT43=23]: %GREEN%%NAME% %RED%Ares* //Telling of Beads
+ItemDisplay[SET amu ITEMSTAT43=18 AND ITEMSTAT27=15]: %GREEN%%NAME% RED%Mreg* //Telling of Beads
+ItemDisplay[SET amu ITEMSTAT43=18 AND LIFE>11]: %GREEN%%NAME% %RED%Life* //Telling of Beads
+ItemDisplay[SET amu ITEMSTAT43=18]: %GREEN%%NAME% %YELLOW%LLD //Telling of Beads
+ItemDisplay[SET amu ITEMSTAT27=55]: %GREEN%%NAME% %RED%Reg* //Civerb's Icon
+ItemDisplay[SET amu ALLSK=1 amu AND ITEMSTAT27=40]: %GREEN%%NAME% %RED%+Skill* //Civerb's Icon
+ItemDisplay[SET amu ITEMSTAT27=40]: %GREEN%%NAME% %YELLOW%LLD  //Civerb's Icon
+ItemDisplay[SET amu ITEMSTAT89=3 AND ALLSK=1]: %GREEN%%NAME% %RED%+Skill*//Angelics Wings
+ItemDisplay[SET amu ITEMSTAT89=3]: %GREEN%%NAME% %YELLOW%LLD  //Angelics Wings
+
+//unique rings
+
+ItemDisplay[UNI rin LIFE=20 AND ITEMSTAT96=10]: %GOLD%%NAME% %RED%Frw* //Manald Heal
+ItemDisplay[UNI rin LIFE=20 ITEMSTAT105=10]: %GOLD%%NAME% %RED%Fcr*  //Manald Heal
+ItemDisplay[UNI rin LIFE=20 ITEMSTAT34=6]: %GOLD%%NAME% %RED%Pdr* //Manald Heal TEST
+ItemDisplay[UNI rin LIFE=20]: %GOLD%%NAME% %YELLOW%LLD //Manald Heal
+ItemDisplay[UNI rin ALLSK=1 AND MANA=20 AND ITEMSTAT96=10]: %GOLD%%NAME% %RED%Frw*  //Stone of Jordan
+ItemDisplay[UNI rin ALLSK=1 AND MANA=20 AND ITEMSTAT105=10]: %GOLD%%NAME% %RED%Fcr*  //Stone of Jordan
+ItemDisplay[UNI rin ALLSK=1 AND MANA=20 ITEMSTAT34=6]: %GOLD%%NAME% %RED%Pdr*  //Stone of Jordan TEST
+ItemDisplay[UNI rin ALLSK=1 AND MANA=20]: %GOLD%%NAME% %RED%*  //Stone of Jordan
+
+//set rings
+ItemDisplay[SET rin LIFE=20 AND ITEMSTAT96=10]: %GREEN%%NAME% %RED%Frw* //Angelic Halo
+ItemDisplay[SET rin LIFE=20 AND ITEMSTAT105=10]: %GREEN%%NAME% %RED%Fcr* //Angelic Halo
+ItemDisplay[SET rin LIFE=20 ITEMSTAT36=6]: %GREEN%%NAME% %RED%Pdr* //Angelic Halo TEST
+ItemDisplay[SET rin LIFE=20]: %GREEN%%NAME% %YELLOW%LLD //Angelic Halo
+
+//////////////base
+
+//base necro shields
+ItemDisplay[NMAG CL4 !ELT !nea !ne9 !ne8 !SOCK=1 (SK67>1 OR SK93>1 OR SK84>1 OR SK83>1 OR SK92>1)]: %NAME% %YELLOW%LLD %RED%Sk* // teeth / bone spirit / bone spear / desecrate / psn nova
+
+//base druid pelts
+ItemDisplay[NMAG CL1 !ELT !dra !dr9 !SOCK=1 (SK234>1 OR SK245>1 OR SK238>1 OR SK239>1)]: %NAME% %YELLOW%LLD %RED%Sk* //fissure(eruption) / tornado / rabies /fireclaws
+
+//base claws
+ItemDisplay[NMAG CL5 !ELT !9qr !9hw !9lw !SOCK=1 (SK262>1 OR SK273>1 OR SK274>1 OR SK275>1 OR SK277>1 OR SK278>1)]: %NAME% %YELLOW%LLD %RED%Sk* // wof / mindblast / Boi / dragonflight / bladeshield /
+
+//scpeters
+ItemDisplay[NMAG WP13 !ELT !SOCK=1 !SOCK=2 (SK101>1 OR SK112>1 OR SK117>1 OR SK121>1 OR SK113>1 OR SK123>1 OR SK118>1)]: %NAME% %YELLOW%LLD %RED%Sk* // holy bolt / hammer / holy shield / foh / conc / conv / holy shock
+
+//barb helms
+ItemDisplay[NMAG CL2 !ELT !SOCK=1 !baa !ba9 (SK151>1 OR SK148>1 OR SK153>1 OR SK149>1 OR SK155>1 OR SK138>1 OR SK127>1 OR SK128>1 OR SK129>1 OR SK134>1 OR SK135>1 OR SK136>1)]: %NAME% %YELLOW%LLD %RED%Sk* // whirlwind / movespeed / res / bo / battle command / shout / masterys 
+
+//sorc orbs 
+ItemDisplay[NMAG CL6 !ELT !oba !ob9 (SK36>1 OR SK39>1 OR SK40>1 OR SK44>1 OR SK47>1 OR SK48>1 OR SK51>1 OR SK52>1 OR SK54>1 OR SK56>1 OR SK59>1 OR SK62>1 OR SK64>1)]: %NAME% %YELLOW%LLD %RED%Sk* // firebolt / icebolt / frozen arm (frigerate) / fnova / fireball / nova / firewall / enchant (enflame) / teleport / meteor / blizzard / hydra / frozen orb /
+
+///////////////Bases
+
+//helms
+ItemDisplay[NMAG crn ED=15 SOCK=3 !RW]: %NAME% %RED%%SOCKETS%Os %RED%Ed** //3os crown
+ItemDisplay[NMAG crn ED>9 SOCK=3 !RW]: %NAME% %YELLOW%LLD %RED%%SOCKETS%Os %RED%Ed*//3os crown
+
+//armors
+ItemDisplay[NMAG gth SOCK=4 ED=15 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os %RED%Ed**//Gothic Plate
+ItemDisplay[NMAG ltp !SOCK=1 ED=15 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os %RED%Ed**///light Plate
+ItemDisplay[NMAG xtp !SOCK=1 ED=15 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os %RED%Ed**///Mage Plate 
+ItemDisplay[NMAG xui !SOCK=1 ED=15 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os %RED%Ed**///ghost armor
+ItemDisplay[NMAG aar !SOCK=1 ED=15 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os %RED%Ed**///Ancient Armor
+ItemDisplay[NMAG gth SOCK=4 ED>9 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os %RED%Ed*//Gothic Plate
+ItemDisplay[NMAG ltp !SOCK=1 ED>9 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os %RED%Ed*///light Plate
+ItemDisplay[NMAG xtp !SOCK=1 ED>9 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os %RED%Ed*///Mage Plate 
+ItemDisplay[NMAG xui !SOCK=1 !SOCK=1 ED>9 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os %RED%Ed*///ghost armor
+ItemDisplay[NMAG aar !SOCK=1 !SOCK=1 ED>9 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os %RED%Ed*///Ancient Armor
+ItemDisplay[NMAG gth SOCK=4 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os//Gothic Plate
+ItemDisplay[NMAG ltp !SOCK=1 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os///light Plate
+ItemDisplay[NMAG xtp !SOCK=1 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os///Mage Plate 
+ItemDisplay[NMAG aar !SOCK=1 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os///Ancient Armor
+ItemDisplay[NMAG xui !SOCK=1 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os///Ghost armor
+
+//shields
+ItemDisplay[NMAG xpk !SOCK=1 !SOCK=0 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os //Barbed Shield
+ItemDisplay[NMAG xsh !SOCK=1 !SOCK=0 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os //Grim Shield
+ItemDisplay[NMAG tow !SOCK=1 !SOCK=0 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os //tower shield
+ItemDisplay[NMAG xow SOCK=4 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os //Pavise
+ItemDisplay[NMAG pa3 !SOCK=1 RES>44]: %NAME% %RED%Ares**//heraldic Shield
+ItemDisplay[NMAG pa3 (!SOCK=1 ITEMSTAT39>39 AND ITEMSTAT39<45)]: %NAME% %RED%Ares* //heraldic Shield
+ItemDisplay[NMAG pa3 !SOCK=1 RES>44 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os %RED%Ares*//heraldic Shield
+ItemDisplay[NMAG pa3 !SOCK=1 (RES>39 AND RES<45) !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os //heraldic Shield
+ItemDisplay[NMAG pa7 !SOCK=1 ED=65]: %NAME% %YELLOW%LLD %RED%Ed*//akaran rondache
+ItemDisplay[NMAG pa7 !SOCK=1 ED>50]: %NAME% %YELLOW%LLD %RED%Ed*//akaran rondache
+ItemDisplay[NMAG pa7 !SOCK=1 ED=65 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os %RED%Ed*//akaran rondache
+ItemDisplay[NMAG pa7 !SOCK=1 ED>50 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os %RED%Ed*//akaran rondache
+ItemDisplay[NMAG pa7 !SOCK=1 ED>15) !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os //akaran rondache
+
+//weapons
+ItemDisplay[NMAG crs SOCK=4 SOCK=6 !RW]: %NAME% %YELLOW%LLD %RED%%SOCKETS%Os* // Crystal 
+ItemDisplay[NMAG mpi SOCK=6 !RW]: %NAME% %YELLOW%LLD %RED%%SOCKETS%Os* // military pick
+ItemDisplay[NMAG bsd SOCK=4 !RW]: %NAME% %YELLOW%LLD %RED%%SOCKETS%Os* // Broad sword
+ItemDisplay[NMAG 9fl SOCK=4 SOCK=5 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os // Knout 
+ItemDisplay[NMAG wsp SOCK=4 !RW ]: %NAME% %YELLOW%LLD %RED%%SOCKETS%Os* // war scepter 
+ItemDisplay[NMAG 9ws !SOCK=1 !RW ]: %NAME% %YELLOW%LLD %SOCKETS%Os // Divine Scepter 
+ItemDisplay[NMAG 9wa SOCK>3 !RW ]: %NAME% %YELLOW%LLD %SOCKETS%Os // Naga
+ItemDisplay[NMAG 9kr !SOCK=1 !SOCK=2 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os // cinquedeas
+ItemDisplay[NMAG btl SOCK=3 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os // Blade Talons 
+ItemDisplay[NMAG 9ar SOCK=3 !RW]: %NAME% %YELLOW%LLD %SOCKETS%Os // Quhab
+ItemDisplay[NMAG 9cs !SOCK=1!RW]: %NAME% %YELLOW%LLD %SOCKETS%Os // Hand scythe
+ItemDisplay[NMAG am6 SOCK=5 TABSK0=3 !RW]: %NAME% %RED%%SOCKETS%Os %RED%Sk*** // Ashwood Bow
+ItemDisplay[NMAG am6 !SOCK=1 TABSK0>0 !RW]: %NAME% %YELLOW%%SOCKETS%Os %RED%Sk* // Ashwood Bow
+ItemDisplay[NMAG 9pa SOCK=4 ETH !RW]: %NAME% %YELLOW%LLD %RED%%SOCKETS%Eth %RED%Os* // Partizan
+ItemDisplay[NMAG 9pa SOCK=4 !RW]: %NAME% %YELLOW%LLD %RED%%SOCKETS%Os* // Partizan
+ItemDisplay[NMAG vou SOCK=0 SOCK=4 !RW]: %NAME% %YELLOW%LLD %RED%%SOCKETS%Os* // Voulge
+
+//UNID magic
+
+//necro magic shields
+ItemDisplay[MAG CL4 !ELT !nea !ne9 !ne8]: %NAME% %YELLOW%LLD
+
+//base druid pelts
+ItemDisplay[MAG CL1 !ELT !dra !dr9]: %NAME% %YELLOW%LLD 
+
+//base claws
+ItemDisplay[MAG 9cs]: %NAME% %YELLOW%LLD
+
+//scpeters
+ItemDisplay[MAG wsp 9ws]: %NAME% %YELLOW%LLD
+
+//barb helms
+ItemDisplay[MAG CL2 !ELT !baa !ba9]: %NAME% %YELLOW%LLD
+
+//sorc orbs / staves
+ItemDisplay[MAG CL6 !ELT !oba !ob9]: %NAME% %YELLOW%LLD 
+
+//////////jewelery
+
+//magic jewels
+ItemDisplay[ID MAG jew ITEMSTAT22=15]: %NAME% %YELLOW%LLD %RED%Max* // max dmg jewel%RED%*
+ItemDisplay[ID MAG jew RES=15 ITEMSTAT22=15]: %NAME% %YELLOW%LLD %RED%Ares Max*** // alres max dmg jewel
+ItemDisplay[ID MAG jew RES>0 (ITEMSTAT22>7 AND ITEMSTAT22<16)]: %NAME% %YELLOW%LLD %RED%Ares Max** // alres max dmg jewel
+ItemDisplay[ID MAG jew RES>0 (ITEMSTAT0>0 AND ITEMSTAT0<8)]: %NAME% %YELLOW%LLD %RED%Ares Str** // alres str jewel
+ItemDisplay[ID MAG jew RES>0 (ITEMSTAT2>0 AND ITEMSTAT2<10)]: %NAME% %YELLOW%LLD %RED%Ares Dex** // alres dex jewel
+ItemDisplay[ID MAG jew ITEMSTAT22=24]: %NAME% %YELLOW%LLD %RED%Max*** // max dmg jewel
+ItemDisplay[ID MAG jew (ITEMSTAT22>15 AND ITEMSTAT22<25)]: %NAME% %YELLOW%LLD %RED%Max** // max dmg jewel
+ItemDisplay[ID MAG jew ITEMSTAT22=15 (ED>0 AND ED<21)]: %NAME% %YELLOW%LLD %RED%Max Ed*** // max dmg jewel ed jewel
+ItemDisplay[ID MAG jew ITEMSTAT91=-15 RES=15]: %NAME% %YELLOW%LLD %RED%Ares Req*** //alres jewel -req
+ItemDisplay[ID MAG jew ITEMSTAT91=-15 (RES>9 AND RES<16)]: %NAME% %YELLOW%LLD %RED%Ares Req** //alres jewel -req
+ItemDisplay[ID MAG jew (ITEMSTAT22>9 AND ITEMSTAT22<16) !FHR !IAS]: %NAME% %YELLOW%LLD // max dmg jewel
+ItemDisplay[ID MAG jew !FHR>0 !IAS>0 (RES>9 AND RES<16)]: %NAME% %YELLOW%LLD //alres jewel
+ItemDisplay[ID MAG jew !FHR>0 !IAS>0 ITEMSTAT91=-15]: %NAME% %YELLOW%LLD //-req jewel
+
+//////////magics
+
+//ama magic javalins TEST
+
+ItemDisplay[ID MAG am5 ama IAS=30 TABSK2=4]: %NAME% %RED%430***
+ItemDisplay[ID MAG am5 ama IAS=30 TABSK2=3 CLSK0=1]: %NAME% %RED%430***
+ItemDisplay[ID MAG am5 ama IAS=30 TABSK2=2 CLSK0=1]: %NAME% %RED%330**
+ItemDisplay[ID MAG am5 ama IAS=30 TABSK2=3]: %NAME% %RED%330**
+ItemDisplay[ID MAG am5 ama CLSK0>0 IAS>0]: %NAME% %YELLOW%LLD
+ItemDisplay[ID MAG am5 ama TABSK2>0 IAS>0]: %NAME% %YELLOW%LLD
+ItemDisplay[MAG am5 ama]: %NAME% %YELLOW%LLD
+ItemDisplay[MAG am6]: %NAME% %YELLOW%LLD //ashwood
+ItemDisplay[ID MAG EQ4 !ELT TABSK2=2 IAS=20]: %NAME% %RED%220***
+ItemDisplay[ID MAG EQ4 !ELT TABSK2<3 IAS<20]: %NAME% %YELLOW%LLD
+
+//IDENT magic sk
+
+//necro magic shields
+ItemDisplay[ID MAG CL4 !ELT !nea !ne9 !ne8 ITEMSTAT102>0 (SK67>1 OR SK93>1 OR SK84>1 OR SK83>1 OR SK92>1)]: %NAME% %YELLOW%LLD %RED%Block*Sk* // teeth / bone spirit / bone spear / desecrate / psn nova
+
+//base druid pelts
+ItemDisplay[ID MAG CL1 !ELT !dra !dr9 (SK234>1 OR SK245>1 OR SK238>1 OR SK239>1)]: %NAME% %YELLOW%LLD %RED%Sk* //fissure(eruption) / tornado / rabies /fireclaws
+
+//base claws
+ItemDisplay[ID MAG 9cs (SK262>1 OR SK273>1 OR SK274>1 OR SK275>1 OR SK277>1 OR SK278>1)]: %NAME% %YELLOW%LLD %RED%Sk* // wof / mindblast / Boi / dragonflight / bladeshield /
+
+//scpeters
+ItemDisplay[ID MAG WP13 !ELT (SK101>1 OR SK112>1 OR SK117>1 OR SK121>1 OR SK113>1 OR SK123>1 OR SK118>1)]: %NAME% %YELLOW%LLD %RED%Sk* // holy bolt / hammer / holy shield / foh / conc / conv / holy shock
+
+//barb helms
+ItemDisplay[ID MAG CL2 !ELT !baa !ba9 (SK151>1 OR SK148>1 OR SK153>1 OR SK149>1 OR SK155>1 OR SK138>1 OR SK127>1 OR SK128>1 OR SK129>1 OR SK134>1 OR SK135>1 OR SK136>1)]: %NAME% %YELLOW%LLD %RED%Sk* // whirlwind / movespeed / res / bo / battle command / shout / masterys
+
+//sorc orbs 
+ItemDisplay[ID NMAG CL6 !ELT !oba !ob9 (SK36>1 OR SK39>1 OR SK40>1 OR SK44>1 OR SK47>1 OR SK48>1 OR SK51>1 OR SK52>1 OR SK54>1 OR SK56>1 OR SK59>1 OR SK62>1 OR SK64>1)]: %NAME% %YELLOW%LLD %RED%Fcr*Sk* // firebolt / icebolt / frozen arm (frigerate) / fnova / fireball / nova / firewall / enchant (enflame) / teleport / meteor / blizzard / hydra / frozen orb /
+
+//IDENT magic armors / SHOP
+
+ItemDisplay[ID MAG gth (LIFE>50 AND LIFE<81)!SOCK=1 !SOCK=2]: %NAME% %YELLOW%LLD %RED%Life* //Gothic Plate
+ItemDisplay[ID MAG ltp (LIFE>50 AND LIFE<81) !SOCK=1 !SOCK=2]: %NAME% %YELLOW%LLD %RED%Life* ///light Plate
+ItemDisplay[ID MAG xtp (LIFE>50 AND LIFE<81) !SOCK=1 !SOCK=2]: %NAME% %YELLOW%LLD %RED%Life* ///Mage Plate 
+ItemDisplay[ID MAG aar (LIFE>50 AND LIFE<81) !SOCK=1 !SOCK=2]: %NAME% %YELLOW%LLD %RED%Life* ///Ancient Armor
+
+ItemDisplay[ID MAG gth FHR=24 !SOCK=1 !SOCK=2]: %NAME% %YELLOW%LLD %RED%Fhr* //Gothic Plate
+ItemDisplay[ID MAG ltp FHR=24 !SOCK=1 !SOCK=2]: %NAME% %YELLOW%LLD %RED%Fhr* ///light Plate
+ItemDisplay[ID MAG xtp FHR=24 !SOCK=1 !SOCK=2]: %NAME% %YELLOW%LLD %RED%Fhr* ///Mage Plate 
+ItemDisplay[ID MAG aar FHR=24 !SOCK=1 !SOCK=2]: %NAME% %YELLOW%LLD %RED%Fhr* ///Ancient Armor
+
+//ident magic / SHOP
+
+ItemDisplay[ID MAG xpk ITEMSTAT20>0 ITEMSTAT102>0 !SOCK=1]: %NAME% %YELLOW%LLD %RED%Block* //Barbed Shield
+ItemDisplay[ID MAG xsh ITEMSTAT20>0 ITEMSTAT102>0 !SOCK=1]: %NAME% %YELLOW%LLD %RED%Block* //Grim Shield
+ItemDisplay[ID MAG tow ITEMSTAT20>0 ITEMSTAT102>0 !SOCK=1]: %NAME% %YELLOW%LLD %RED%Block* //tower shield
+ItemDisplay[ID MAG xow ITEMSTAT20>0 ITEMSTAT102>0 !SOCK=1]: %NAME% %YELLOW%LLD %RED%Block* //Pavise
+ItemDisplay[ID MAG bsh ITEMSTAT20>0 ITEMSTAT102>0 !SOCK=1]: %NAME% %YELLOW%LLD %RED%Block* //Boneshield
+ItemDisplay[ID MAG kit ITEMSTAT20>0 ITEMSTAT102>0 !SOCK=1]: %NAME% %YELLOW%LLD %RED%Block* //kiteshield
+ItemDisplay[ID MAG xts ITEMSTAT20>0 ITEMSTAT102>0 !SOCK=1]: %NAME% %YELLOW%LLD %RED%Block* //ancient
+ItemDisplay[ID MAG pa3 ITEMSTAT20>0 ITEMSTAT102>0 !SOCK=1 RES>44]: %NAME% %YELLOW%LLD %SOCKETS%Os %RED%Block*Ares*//heraldic Shield
+ItemDisplay[ID MAG pa3 ITEMSTAT20>0 ITEMSTAT102>0 !SOCK=1(RES>39 AND RES<45)]: %NAME% %YELLOW%LLD %RED%Block**Ares //heraldic Shield
+
+//////////rare
+
+//UNID rare shields
+
+ItemDisplay[RARE xpk]: %NAME% %YELLOW%LLD //Barbed Shield
+ItemDisplay[RARE xsh]: %NAME% %YELLOW%LLD //Grim Shield
+ItemDisplay[RARE tow]: %NAME% %YELLOW%LLD //tower shield
+ItemDisplay[RARE xow]: %NAME% %YELLOW%LLD //Pavise
+ItemDisplay[RARE kit]: %NAME% %YELLOW%LLD //Kite
+ItemDisplay[RARE bsh]: %NAME% %YELLOW%LLD //Boneshield
+ItemDisplay[RARE xts]: %NAME% %YELLOW%LLD //ancient
+ItemDisplay[RARE pa3]: %NAME% %YELLOW%LLD //heraldic Shield
+ItemDisplay[RARE pa3]: %NAME% %YELLOW%LLD //heraldic Shield
+
+//UNID rare weapons
+
+ItemDisplay[RARE 9wa]: %NAME% %YELLOW%LLD // naga
+ItemDisplay[RARE 9m9]: %NAME% %YELLOW%LLD // war club
+ItemDisplay[RARE 9gi]: %NAME% %YELLOW%LLD // ancient axe
+ItemDisplay[RARE 9gm]: %NAME% %YELLOW%LLD // martel de fer
+ItemDisplay[RARE flb]: %NAME% %YELLOW%LLD // flamberge
+
+
+//UNID rare
+
+//necro RARE shields
+ItemDisplay[RARE CL4 !ELT !nea !ne9 !ne8]: %NAME% %YELLOW%LLD
+
+//base druid pelts
+ItemDisplay[RARE CL1 !ELT !dra !dr9]: %NAME% %YELLOW%LLD 
+
+//base claws
+ItemDisplay[RARE 9cs]: %NAME% %YELLOW%LLD
+
+//scpeters
+ItemDisplay[RARE wsp 9ws]: %NAME% %YELLOW%LLD
+
+//barb helms
+ItemDisplay[RARE CL2 !ELT !baa !ba9]: %NAME% %YELLOW%LLD
+
+//sorc orbs / staves
+ItemDisplay[RARE CL6 !ELT !oba !ob9]: %NAME% %YELLOW%LLD 
+ItemDisplay[RARE WP11 !ELT ]: %NAME% %YELLOW%LLD
+
+//IDENT rare
+
+//ama rare javelins TEST
+ItemDisplay[ID RARE am5 ama IAS=30 TABSK2=4]: %NAME% %RED%430***
+ItemDisplay[ID RARE am5 ama IAS=30 TABSK2=3 CLSK0=1]: %NAME% %RED%430***
+ItemDisplay[ID RARE am5 ama IAS=30 TABSK2=2 CLSK0=1]: %NAME% %RED%330**
+ItemDisplay[ID RARE am5 ama IAS=30 TABSK2=3]: %NAME% %RED%330**
+ItemDisplay[ID RARE am5 ama CLSK0>0 IAS<40]: %NAME% %YELLOW%LLD
+ItemDisplay[ID RARE am5 ama TABSK2>0 IAS<40]: %NAME% %YELLOW%LLD
+ItemDisplay[RARE am5 ama]: %NAME% %YELLOW%LLD
+ItemDisplay[RARE am6]: %NAME% %YELLOW%LLD //ama rare ashwood
+ItemDisplay[ID RARE EQ4 !ELT TABSK2=2 IAS=20]: %NAME% %RED%220***
+ItemDisplay[ID RARE EQ4 !ELT TABSK2<3 IAS<20]: %NAME% %YELLOW%LLD
+
+ItemDisplay[ID RARE xpk ITEMSTAT102>0 !SOCK=1]: %NAME% %YELLOW%LLD %RED%Block* //Barbed Shield
+ItemDisplay[ID RARE xsh ITEMSTAT102>0 !SOCK=1]: %NAME% %YELLOW%LLD %RED%Block* //Grim Shield
+ItemDisplay[ID RARE tow ITEMSTAT102>0 !SOCK=1]: %NAME% %YELLOW%LLD %RED%Block* //tower shield
+ItemDisplay[ID RARE xow ITEMSTAT102>0 !SOCK=1]: %NAME% %YELLOW%LLD %RED%Block* //Pavise
+ItemDisplay[ID RARE kit ITEMSTAT102>0 !SOCK=1]: %NAME% %YELLOW%LLD %RED%Block* //Kite
+ItemDisplay[ID RARE bsh ITEMSTAT102>0 !SOCK=1]: %NAME% %YELLOW%LLD %RED%Block* //Boneshield
+ItemDisplay[ID RARE xts ITEMSTAT102>0 !SOCK=1]: %NAME% %YELLOW%LLD %RED%Block* //ancient
+ItemDisplay[ID RARE pa3 ITEMSTAT102>0 !SOCK=1 RES>44]: %NAME% %YELLOW%LLD %SOCKETS%Os %RED%Block*Ares*//heraldic Shield
+ItemDisplay[ID RARE pa3 ITEMSTAT102>0 !SOCK=1(RES>39 AND RES<45)]: %NAME% %YELLOW%LLD %RED%Block**Ares //heraldic Shield
+
+//rare necro shields
+ItemDisplay[ID RARE CL4 !ELT !nea !ne9 !ne8 ITEMSTAT102>0 (SK67>1 OR SK93>1 OR SK84>1 OR SK83>1 OR SK92>1)]: %NAME% %YELLOW%LLD %RED%Block*Sk* // teeth / bone spirit / bone spear / desecrate / psn nova
+
+// druid pelts
+ItemDisplay[ID RARE CL1 !ELT !dra !dr9 (SK234>1 OR SK245>1 OR SK238>1 OR SK239>1)]: %NAME% %YELLOW%LLD %RED%Sk* //fissure(eruption) / tornado / rabies /fireclaws
+
+// claws
+ItemDisplay[ID RARE 9cs (SK262>1 OR SK273>1 OR SK274>1 OR SK275>1 OR SK277>1 OR SK278>1)]: %NAME% %YELLOW%LLD %RED%Sk* // wof / mindblast / Boi / dragonflight / bladeshield /
+
+//scpeters
+ItemDisplay[ID RARE wsp 9ws (SK101>1 OR SK112>1 OR SK117>1 OR SK121>1 OR SK113>1 OR SK123>1 OR SK118>1)]: %NAME% %YELLOW%LLD %RED%Sk* // holy bolt / hammer / holy shield / foh / conc / conv / holy shock
+
+//barb helms
+ItemDisplay[ID RARE CL2 !ELT !baa !ba9 (SK151>1 OR SK148>1 OR SK153>1 OR SK149>1 OR SK155>1 OR SK138>1 OR SK127>1 OR SK128>1 OR SK129>1 OR SK134>1 OR SK135>1 OR SK136>1)]: %NAME% %YELLOW%LLD %RED%Sk* // whirlwind / movespeed / res / bo / battle command / shout / masters
+
+//sorc orbs 
+ItemDisplay[ID RARE CL6 !ELT !oba !ob9 (SK36>1 OR SK39>1 OR SK40>1 OR SK44>1 OR SK47>1 OR SK48>1 OR SK51>1 OR SK52>1 OR SK54>1 OR SK56>1 OR SK59>1 OR SK62>1 OR SK64>1)]: %NAME% %YELLOW%LLD %RED%Fcr*Sk* // firebolt / icebolt / frozen arm (frigerate) / fnova / fireball / nova / firewall / enchant (enflame) / teleport / meteor / blizzard / hydra / frozen orb /
+
+////// RARE / MAGIC amus
+ItemDisplay[ID (RARE OR MAG) CLSK0=1]: %NAME% %YELLOW%LLD %RED%Ama*%CONTINUE% // ama
+ItemDisplay[ID (RARE OR MAG) CLSK0=1 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) CLSK0=1 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE CLSK0=1 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG CLSK0=1 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) CLSK0=1 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) CLSK0=1 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) CLSK0=1 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) CLSK0=1 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) CLSK0=1 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) CLSK0=1 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) CLSK0=1 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) CLSK0=1 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) CLSK0=1 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE CLSK0=1 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG CLSK0=1 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) CLSK0=1 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) CLSK1=1]: %NAME% %YELLOW%LLD %RED%Sorc*%CONTINUE% // Sorc
+ItemDisplay[ID (RARE OR MAG) CLSK1=1 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) CLSK1=1 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE CLSK1=1 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG CLSK1=1 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) CLSK1=1 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) CLSK1=1 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) CLSK1=1 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) CLSK1=1 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) CLSK1=1 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) CLSK1=1 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) CLSK1=1 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) CLSK1=1 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) CLSK1=1 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE CLSK1=1 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG CLSK1=1 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) CLSK1=1 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) CLSK2=1]: %NAME% %YELLOW%LLD %RED%Necro*%CONTINUE% // Necro
+ItemDisplay[ID (RARE OR MAG) CLSK2=1 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) CLSK2=1 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE CLSK2=1 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG CLSK2=1 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) CLSK2=1 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) CLSK2=1 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) CLSK2=1 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) CLSK2=1 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) CLSK2=1 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) CLSK2=1 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) CLSK2=1 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) CLSK2=1 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) CLSK2=1 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE CLSK2=1 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG CLSK2=1 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) CLSK2=1 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) CLSK3=1]: %NAME% %YELLOW%LLD %RED%Pala*%CONTINUE% // pala
+ItemDisplay[ID (RARE OR MAG) CLSK3=1 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) CLSK3=1 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID (RARE OR MAG) CLSK3=1 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) CLSK3=1 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) CLSK3=1 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) CLSK3=1 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) CLSK3=1 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) CLSK3=1 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) CLSK3=1 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) CLSK3=1 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) CLSK3=1 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID (RARE OR MAG) CLSK3=1 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) CLSK3=1 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+ItemDisplay[ID (RARE OR MAG) CLSK3=1 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG CLSK3=1 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG CLSK3=1 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+
+ItemDisplay[ID (RARE OR MAG) CLSK4=1]: %NAME% %YELLOW%LLD %RED%Barb*%CONTINUE% // Barb
+ItemDisplay[ID (RARE OR MAG) CLSK4=1 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) CLSK4=1 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE CLSK4=1 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG CLSK4=1 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) CLSK4=1 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) CLSK4=1 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) CLSK4=1 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) CLSK4=1 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) CLSK4=1 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) CLSK4=1 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) CLSK4=1 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) CLSK4=1 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) CLSK4=1 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID (RARE OR MAG) CLSK4=1 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) CLSK4=1 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) CLSK4=1 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) CLSK5=1]: %NAME% %YELLOW%LLD %RED%Druid*%CONTINUE% // Druid
+ItemDisplay[ID (RARE OR MAG) CLSK5=1 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) CLSK5=1 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE CLSK5=1 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG CLSK5=1 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) CLSK5=1 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) CLSK5=1 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) CLSK5=1 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) CLSK5=1 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) CLSK5=1 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) CLSK5=1 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) CLSK5=1 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) CLSK5=1 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) CLSK5=1 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE CLSK5=1 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG CLSK5=1 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) CLSK5=1 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) CLSK6=1]: %NAME% %YELLOW%LLD %RED%Assa*%CONTINUE% // Assa
+ItemDisplay[ID (RARE OR MAG) CLSK6=1 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) CLSK6=1 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE CLSK6=1 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG CLSK6=1 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) CLSK6=1 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) CLSK6=1 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) CLSK6=1 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) CLSK6=1 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) CLSK6=1 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) CLSK6=1 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) CLSK6=1 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) CLSK6=1 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) CLSK6=1 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE CLSK6=1 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG CLSK6=1 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) CLSK6=1 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK0=2]: %NAME% %YELLOW%LLD %RED%Bow*%CONTINUE% // Bow
+ItemDisplay[ID (RARE OR MAG) TABSK0=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK0=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK0=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK0=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK0=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK0=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK0=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK0=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK0=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK0=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK0=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK0=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK0=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK0=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK0=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK0=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK1=2]: %NAME% %YELLOW%LLD %RED%Passive*%CONTINUE% // Passive
+ItemDisplay[ID (RARE OR MAG) TABSK1=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK1=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK1=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK1=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK1=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK1=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK1=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK1=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK1=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK1=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK1=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK1=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK1=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK1=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK1=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK1=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK2=2]: %NAME% %YELLOW%LLD %RED%Java*%CONTINUE% // Java
+ItemDisplay[ID (RARE OR MAG) TABSK2=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK2=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK2=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK2=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK2=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK2=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK2=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK2=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK2=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK2=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK2=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK2=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK2=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK2=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK2=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK2=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK8=2]: %NAME% %YELLOW%LLD %RED%Fire*%CONTINUE% // Fire
+ItemDisplay[ID (RARE OR MAG) TABSK8=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK8=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK8=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK8=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK8=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK8=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK8=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK8=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK8=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK8=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK8=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK8=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK8=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK8=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK8=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK8=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK9=2]: %NAME% %YELLOW%LLD %RED%Light*%CONTINUE% // Light
+ItemDisplay[ID (RARE OR MAG) TABSK9=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK9=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK9=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK9=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK9=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK9=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK9=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK9=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK9=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK9=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK9=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK9=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK9=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK9=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK9=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK9=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK10=2]: %NAME% %YELLOW%LLD %RED%Cold*%CONTINUE% // Cold
+ItemDisplay[ID (RARE OR MAG) TABSK10=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK10=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK10=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK10=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK10=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK10=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK10=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK10=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK10=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK10=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK10=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK10=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK10=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK10=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK10=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK10=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK16=2]: %NAME% %YELLOW%LLD %RED%Curse*%CONTINUE% // Curse
+ItemDisplay[ID (RARE OR MAG) TABSK16=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK16=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK16=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK16=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK16=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK16=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK16=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK16=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK16=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK16=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK16=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK16=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK16=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK16=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK16=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK16=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK17=2]: %NAME% %YELLOW%LLD %RED%Pnb*%CONTINUE% // Pnb
+ItemDisplay[ID (RARE OR MAG) TABSK17=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK17=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK17=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK17=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK17=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK17=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK17=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK17=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK17=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK17=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK17=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK17=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK17=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK17=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK17=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK17=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK18=2]: %NAME% %YELLOW%LLD %RED%NSummon*%CONTINUE% // NSummon
+ItemDisplay[ID (RARE OR MAG) TABSK18=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK18=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK18=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK18=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK18=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK18=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK18=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK18=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK18=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK18=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK18=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK18=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK18=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK18=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK18=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK18=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK24=2]: %NAME% %YELLOW%LLD %RED%PComb*%CONTINUE% // pala 
+ItemDisplay[ID (RARE OR MAG) TABSK24=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK24=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK24=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK24=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK24=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK24=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK24=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK24=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK24=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK24=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK24=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK24=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK24=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK24=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK24=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK24=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK25=2]: %NAME% %YELLOW%LLD %RED%Off*%CONTINUE% // Offensive 
+ItemDisplay[ID (RARE OR MAG) TABSK25=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK25=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK25=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK25=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK25=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK25=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK25=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK25=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK25=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK25=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK25=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK25=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK25=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK25=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK25=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK25=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK26=2]: %NAME% %YELLOW%LLD %RED%Def*%CONTINUE% // Defensive 
+ItemDisplay[ID (RARE OR MAG) TABSK26=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK26=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK26=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK26=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK26=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK26=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK26=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK26=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK26=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK26=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK26=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK26=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK26=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK26=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK26=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK26=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK32=2]: %NAME% %YELLOW%LLD %RED%BComb*%CONTINUE% // Barb combat
+ItemDisplay[ID (RARE OR MAG) TABSK32=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK32=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK32=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK32=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK32=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK32=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK32=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK32=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK32=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK32=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK32=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK32=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK32=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK32=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK32=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK32=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK33=2]: %NAME% %YELLOW%LLD %RED%Masteries*%CONTINUE% // Barb masteries
+ItemDisplay[ID (RARE OR MAG) TABSK33=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK33=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK33=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK33=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK33=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK33=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK33=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK33=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK33=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK33=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK33=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK33=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK33=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK33=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK33=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK33=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK34=2]: %NAME% %YELLOW%LLD %RED%WCries*%CONTINUE% // Warcrys
+ItemDisplay[ID (RARE OR MAG) TABSK34=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK34=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK34=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK34=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK34=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK34=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK34=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK34=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK34=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK34=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK34=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK34=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK34=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK34=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK34=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK34=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK40=2]: %NAME% %YELLOW%LLD %RED%DSummon*%CONTINUE% // Dsummon 
+ItemDisplay[ID (RARE OR MAG) TABSK40=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK40=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK40=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK40=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK40=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK40=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK40=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK40=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK40=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK40=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK40=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK40=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK40=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK40=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK40=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK40=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK41=2]: %NAME% %YELLOW%LLD %RED%Shape*%CONTINUE% // Shapeshift
+ItemDisplay[ID (RARE OR MAG) TABSK41=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK41=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK41=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK41=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK41=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK41=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK41=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK41=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK41=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK41=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK41=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK41=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK41=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK41=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK41=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK41=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK42=2]: %NAME% %YELLOW%LLD %RED%Ele*%CONTINUE% // Ele 
+ItemDisplay[ID (RARE OR MAG) TABSK42=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK42=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK42=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK42=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK42=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK42=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK42=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK42=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK42=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK42=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK42=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK42=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK42=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK42=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK42=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK42=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK48=2]: %NAME% %YELLOW%LLD %RED%Trap*%CONTINUE% // Trap 
+ItemDisplay[ID (RARE OR MAG) TABSK48=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK48=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK48=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK48=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK48=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK48=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK48=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK48=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK48=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK48=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK48=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK48=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK48=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK48=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK48=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK48=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK49=2]: %NAME% %YELLOW%LLD %RED%Shadow*%CONTINUE% // Shadow
+ItemDisplay[ID (RARE OR MAG) TABSK49=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK49=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK49=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK49=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK49=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK49=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK49=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK49=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK49=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK49=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK49=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK49=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK49=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK49=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK49=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK49=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+ItemDisplay[ID (RARE OR MAG) TABSK50=2]: %NAME% %YELLOW%LLD %RED%MartialA*%CONTINUE% // Martial art c
+ItemDisplay[ID (RARE OR MAG) TABSK50=2 ALLSK=1]: %NAME% %RED%Sk*%CONTINUE% //	+1 allsk
+ItemDisplay[ID (RARE OR MAG) TABSK50=2 FCR=10]:%NAME% %RED%Fcr*%CONTINUE%// fcr
+ItemDisplay[ID RARE TABSK50=2 (LIFE>40 AND LIFE<61)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID MAG TABSK50=2 (LIFE>60 AND LIFE<81)]:%NAME% %RED%Life*%CONTINUE%// life
+ItemDisplay[ID (RARE OR MAG) TABSK50=2 (MANA>60 AND MANA<91)]:%NAME% %RED%Mana*%CONTINUE%//mana	
+ItemDisplay[ID (RARE OR MAG) TABSK50=2 (RES>10 AND RES<16)]:%NAME% %RED%Ares*%CONTINUE%// allres 
+ItemDisplay[ID (RARE OR MAG) TABSK50=2 (ITEMSTAT39>31 AND ITEMSTAT39<41)]:%NAME% %RED%Fres*%CONTINUE%// fire
+ItemDisplay[ID (RARE OR MAG) TABSK50=2 (ITEMSTAT41>31 AND ITEMSTAT41<41)]:%NAME% %RED%Lres*%CONTINUE%// light 
+ItemDisplay[ID (RARE OR MAG) TABSK50=2 (ITEMSTAT43>31 AND ITEMSTAT43<41)]:%NAME% %RED%Cres*%CONTINUE%// cold 
+ItemDisplay[ID (RARE OR MAG) TABSK50=2 (ITEMSTAT45>31 AND ITEMSTAT45<41)]:%NAME% %RED%Pres*%CONTINUE%// psn 
+ItemDisplay[ID (RARE OR MAG) TABSK50=2 (ITEMSTAT2>5 AND ITEMSTAT2<10)]:%NAME% %RED%Dex*%CONTINUE%// dex
+ItemDisplay[ID (RARE OR MAG) TABSK50=2 (ITEMSTAT0>5 AND ITEMSTAT0<10)]:%NAME% %RED%Str*%CONTINUE%// str
+ItemDisplay[ID (RARE OR MAG) TABSK50=2 (ITEMSTAT1>15 AND ITEMSTAT1<21)]:%NAME% %RED%Ene*%CONTINUE%// energie
+ItemDisplay[ID RARE TABSK50=2 (ITEMSTAT74>5 AND ITEMSTAT74<11)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID MAG TABSK50=2 (ITEMSTAT74>10 AND ITEMSTAT74<16)]:%NAME% %RED%Repl*%CONTINUE%// repl
+ItemDisplay[ID (RARE OR MAG) TABSK50=2 ITEMSTAT110=75]:%NAME% %RED%PsnR*%CONTINUE%// psn length
+
+//misc
+
+//chipped gems
+ItemDisplay[gcv]: %YELLOW%Charges %YELLOW%LLD
+ItemDisplay[gcw]: %YELLOW%Charges %YELLOW%LLD
+ItemDisplay[gcg]: %YELLOW%Charges %YELLOW%LLD
+ItemDisplay[gcr]: %YELLOW%Charges %YELLOW%LLD
+ItemDisplay[gcb]: %YELLOW%Charges %YELLOW%LLD
+ItemDisplay[gcy]: %YELLOW%Charges %YELLOW%LLD
+ItemDisplay[skc]: %YELLOW%Charges %YELLOW%LLD
+
+//Ear
+ItemDisplay[ear CLVL=30]: %YELLOW%%NAME% %RED%Hail to the king, baby! 
+
+//════════════════LLD30-Addon════════════════
