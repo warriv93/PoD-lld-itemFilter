@@ -4,18 +4,17 @@ Patch: Beta 2.0b
 
 ════════════════LLD30-Addon════════════════
 
-
 This is a Lootfilter Addon for everyone interested in Low Level Duels.
 
 This is a Addon to your existing Lootfilter.
 
 After installing there is no! major change to your existing Lootfilter.
 
-There are two! exceptions: 
+## There are two! exceptions: 
 
-A Identified! Charms in the lvl range of 1 - 30 will be tagged as for example: "Frw" or "Max Life" or "LLD".
+1. Identified! Charms in the lvl range of 1 - 30 will be tagged as for example: "Frw" or "Max Life" or "LLD".
 
-A Identified! Corrupted Stone of Jordans will be tagged as for example: "Frw" or "Fcr" or "Pdr".
+2. Identified! Corrupted Stone of Jordans will be tagged as for example: "Frw" or "Fcr" or "Pdr".
 
 
 ## Installation:
