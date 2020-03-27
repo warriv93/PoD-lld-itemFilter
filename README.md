@@ -2,7 +2,7 @@
 Patch: Beta 2.0b
 
 
-//════════════════LLD30-Addon════════════════
+════════════════LLD30-Addon════════════════
 
 
 This is a Lootfilter Addon for everyone interested in Low Level Duels.
